@@ -1,38 +1,50 @@
-.App {
-  text-align: center;
+body {
+  background-color: #b980f0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  /* apply CSS on box and also did box is centre verticaly and horizontally */
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  height: 500px;
+  width: 325px;
+  border-radius: 4%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ /* add box shdow on hover effect  */
+.center:hover{
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* added CSS on H1 tag for good looking */
+h1{
+    text-align: center;
+    color: #b980f0;
+    text-shadow: 2px 4px 4px rgba(0,0,0,0.3), 
+    0px -4px 5px rgba(255,255,255,0.3);
 }
 
-.App-link {
-  color: #61dafb;
+.task{
+    margin-left: 20px;
+    text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input[type="text"]::placeholder { 
+                text-align: center;
+                font-weight: 600;
+            }
+
+ .icon{
+  margin-left: 20px;
+  color: #b980f0;
+}
+
+.icon:hover{
+  color: green;
 }
