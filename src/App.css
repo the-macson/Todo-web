@@ -40,11 +40,23 @@ input[type="text"]::placeholder {
                 font-weight: 600;
             }
 
- .icon{
+.icon{
   margin-left: 20px;
   color: #b980f0;
 }
 
 .icon:hover{
   color: green;
+}
+
+ol{
+  list-style-type: none;
+  font-size: medium;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+.icon1:hover{
+  color: red;
 }
