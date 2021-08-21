@@ -54,6 +54,7 @@ function App() {
                     color="primary"
                     className="icon1"
                     id = {index}
+                    key ={index}
                     onClick ={()=>{
                       deleteItems(index);
                     }}
