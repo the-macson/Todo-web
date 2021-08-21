@@ -1,7 +1,5 @@
 import React, {useState} from "react";
 import Input from "@material-ui/core/Input";
-// import Button from "@material-ui/core/Button";
-// import AddIcon from "@material-ui/icons/Add";
 import AddCircleIcon from "@material-ui/icons/AddCircle";
 import CancelIcon from "@material-ui/icons/Cancel";
 import IconButton from "@material-ui/core/IconButton";
@@ -15,6 +13,14 @@ function App() {
   const listOfItem=()=>{
         setItems((oldItems) =>{
           return [...oldItems,inputList];
+        });
+        setInputList("");
+  }
+  const deleteItems =(id)=>{
+        setItems((oldItems)=>{
+          return oldItems.filter((arrElem,index)=> {
+              return index !== id;
+          })
         })
   }
   return (
@@ -23,6 +29,7 @@ function App() {
         <div class="center">
           <h1>To Do List</h1>
           <Input
+            value={inputList}
             type="text"
             placeholder="Add your Task"
             className="task"
@@ -39,13 +46,17 @@ function App() {
             </IconButton>
           </span>
           <ol>
-            {Items.map((itemval) => {
+            {Items.map((itemval,index) => {
               return (
                 <li>
                   <IconButton
                     aria-label="cancel"
                     color="primary"
                     className="icon1"
+                    id = {index}
+                    onClick ={()=>{
+                      deleteItems(index);
+                    }}
                   >
                     <CancelIcon fontSize="large" />
                   </IconButton>
